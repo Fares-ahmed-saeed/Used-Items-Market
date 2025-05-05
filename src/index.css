@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 267 75% 75%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 290 70% 70%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-purple-700/30 selection:text-white;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+  }
+}
+
+.product-image-container {
+  position: relative;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  background-color: rgba(250, 250, 250, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(150, 120, 255, 0.2);
+}
+
+/* Add some cosmic styles for cards and UI elements */
+.cosmic-card {
+  @apply bg-white border border-purple-200/60 shadow-md;
+}
+
+.cosmic-input {
+  @apply bg-white border-purple-300/40 focus:border-purple-500/70 focus:ring-purple-500/30;
+}
+
+.cosmic-glow {
+  text-shadow: 0 0 8px rgba(160, 120, 255, 0.9);
+}
+
+.cosmic-button {
+  @apply bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white;
+}
+
+/* Splashy styles for UI elements */
+.splash-card {
+  @apply bg-white border border-purple-300/40 shadow-md;
+}
+
+.splash-button {
+  @apply bg-gradient-to-r from-fuchsia-600 to-violet-600 hover:from-fuchsia-700 hover:to-violet-700 text-white font-medium shadow-lg shadow-fuchsia-700/20 transition-all duration-300;
+}
+
+.splash-input {
+  @apply bg-white border-indigo-300/40 focus:border-fuchsia-500/70 focus:ring-fuchsia-500/30 transition-all duration-300 text-gray-800 placeholder:text-gray-400;
+}
+
+.splash-glow {
+  text-shadow: 0 0 8px rgba(186, 104, 255, 0.8), 0 0 20px rgba(150, 100, 255, 0.5);
+}
+
+.splash-border {
+  @apply border border-purple-300/40 rounded-lg p-0.5 bg-white;
+}
+
+/* Animation utilities */
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-md hover:shadow-purple-500/30;
+}
+
+/* Splash gradients */
+.splash-gradient-1 {
+  background: linear-gradient(225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+}
+
+.splash-gradient-2 {
+  background: linear-gradient(102.3deg, rgba(167, 60, 180, 1) 5.9%, rgba(234, 172, 232, 1) 64%, rgba(246, 219, 245, 1) 89%);
+}
+
+.splash-gradient-3 {
+  background: linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%);
+}
+
+/* Custom card effects */
+.card-glass {
+  @apply bg-white border border-purple-200/30 shadow-md;
+}
+
+/* Form controls for add-listing page */
+.form-control {
+  @apply bg-white border-purple-300/40 focus:border-fuchsia-500/70 focus:ring-fuchsia-500/30 rounded-md px-4 py-2 text-gray-800;
+}
+
+.form-label {
+  @apply text-gray-700 font-medium mb-1.5 block;
+}
+
+/* Tab styles */
+.tab-active {
+  @apply bg-gradient-to-r from-fuchsia-600/90 to-violet-600/90 text-white;
+}
+
+.tab-inactive {
+  @apply bg-gray-50 text-gray-700 hover:bg-gray-100;
+}
+
+/* Button styles */
+.primary-button {
+  @apply bg-gradient-to-r from-fuchsia-600 to-violet-600 hover:from-fuchsia-700 hover:to-violet-700 text-white px-4 py-2 rounded-md font-medium shadow-lg shadow-fuchsia-700/20;
+}
+
+.secondary-button {
+  @apply bg-white hover:bg-gray-50 border border-purple-300/30 text-gray-700 px-4 py-2 rounded-md;
+}
